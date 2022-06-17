@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>C3VD</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center" style="margin-top: 15px;margin-bottom: 15px;">
+            <div class="col-9">
+                <h1 class="text-center">Colonoscopy 3D Video Dataset (C3VD)</h1>
+                <div class="row text-center justify-content-center">
+                    <div class="col-4"><a href="https://scholar.google.com/citations?user=y8RsSRwAAAAJ&amp;hl=en">Taylor L. Bobrow</a></div>
+                    <div class="col-4"><a href="https://scholar.google.com/citations?user=FjX3JAEAAAAJ">Mayank Golhar</a></div>
+                    <div class="col-4"><a href="https://scholar.google.com/citations?hl=en&amp;user=YA_gt5EAAAAJ">Rohan Vijayan</a></div>
+                </div>
+                <div class="row text-center justify-content-center">
+                    <div class="col-4"><a href="https://scholar.google.com/citations?hl=en&amp;user=a3eRS3sAAAAJ">Venkata Akshintala</a></div>
+                    <div class="col-4"><a href="https://scholar.google.com/citations?user=AdiG_IAAAAAJ&amp;hl=en&amp;oi=sra">Juan R. Garcia</a></div>
+                    <div class="col-4"><a href="https://scholar.google.com/citations?user=AdhZfSkAAAAJ&amp;hl=en">Nicholas J. Durr*</a></div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p class="text-center" style="margin-bottom: 0px;">Johns Hopkins University</p>
+                        <p class="fs-6 fw-light text-center" style="margin-bottom: 0px;"><em>*corresponding author (ndurr@jhu.edu)</em></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="margin-top: 15px;margin-bottom: 15px;">
+            <div class="col text-center"><img class="img-fluid" src="assets/img/sample.gif"></div>
+        </div>
+        <div class="row" style="margin-bottom: 15px;margin-top: 15px;">
+            <div class="col">
+                <h2 class="text-center">Abstract</h2>
+                <p>Screening colonoscopy is an important clinical application for several 3D computer vision techniques, including depth estimation, surface reconstruction, and missing region detection. However, the development, evaluation, and comparison of these techniques in real colonoscopy videos remain largely qualitative due to the difficulty of acquiring ground truth data. In this work, we present a Colonoscopy 3D Video Dataset (C3VD) acquired with a high definition clinical colonoscope and high-fidelity colon models for benchmarking computer vision methods in colonoscopy. We introduce a novel multimodal 2D-3D registration technique to register optical video sequences with ground truth rendered views of a known 3D model. The different modalities are registered by transforming optical images to depth maps with a Generative Adversarial Network and aligning edge features with an evolutionary optimizer. This registration method achieves an average translation error of 0.321 millimeters and an average rotation error of 0.159 degrees in simulation experiments where error-free ground truth is available. The method also leverages video information, improving registration accuracy by 55.6% for translation and 60.4% for rotation compared to single frame registration. 22 short video sequences were registered to generate 10,015 total frames with paired ground truth depth, surface normals, optical flow, occlusion, six degree-of-freedom pose, coverage maps, and 3D models. The dataset also includes screening videos acquired by a gastroenterologist with paired ground truth pose and 3D surface models. The dataset and registration source code are available at durr.jhu.edu/C3VD.<br></p>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 15px;margin-top: 15px;">
+            <div class="col-md-3">
+                <h2>Paper</h2><a href="https://durr.jhu.edu"><img src="assets/img/paper.png"></a>
+            </div>
+            <div class="col-md-9">
+                <h2><span style="color: rgb(51, 51, 51);">Citation</span></h2>
+                <p><span style="color: rgb(51, 51, 51);">Please cite our publication if you use code or data from this site.</span><br></p><pre style="background-color:#f0f0f0; padding:10px; border-radius:3px;">
+<code class="language-latex">@Article{bobrow2022,
+    title = {Colonoscopy 3D Video Dataset with Paired Depth from 2D-3D Registration},
+    author = {Taylor L. Bobrow, Mayank Golhar, Rohan Vijayan, Venkata Akshintala, Juan R. Garcia, Nicholas J. Durr},
+    journal= {arXiv:XXXX.XXXXX},
+    year = {2022},
+}</code>
+</pre>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 15px;margin-top: 15px;">
+            <div class="col text-start">
+                <h2 class="text-center">DATASET &amp; CODE AVAILABLE 6.20.2022</h2>
+                <p></p>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 15px;margin-top: 15px;">
+            <div class="col"><a href="https://github.com/DurrLab/C3VD"></a></div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

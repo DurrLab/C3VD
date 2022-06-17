@@ -1,0 +1,18 @@
+h1 {
+  color: var(--bs-gray-800);
+  font-size: xx-large;
+}
+
+h2 {
+  color: var(--bs-gray-800);
+  font-size: x-large;
+}
+
+a {
+  color: var(--bs-gray-700);
+}
+
+a:hover {
+  color: var(--bs-gray-800);
+}
+
