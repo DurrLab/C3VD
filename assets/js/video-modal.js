@@ -1,0 +1,90 @@
+$(document).ready(function(){
+  $("#video-modal").on("hidden.bs.modal",function(){
+    $("#iframeYoutube").attr("src","#");
+  })
+})
+
+function changeVideo(vId){
+  var iframe=document.getElementById("iframeYoutube");
+  iframe.src="https://www.youtube.com/embed/"+vId;
+  $("#video-modal").modal("show");
+}
+
+$("#c1a").click(function(){
+    changeVideo("FRY5wZsJZno")
+})
+$("#c1b").click(function(){
+    changeVideo("anGQFIE0IYY")
+})
+$("#c2a").click(function(){
+    changeVideo("vnM0b4RpjL8")
+})
+$("#c2b").click(function(){
+    changeVideo("IGDDjcxQejQ")
+})
+$("#c2c").click(function(){
+    changeVideo("v70HxbThe6w")
+})
+$("#c3a").click(function(){
+    changeVideo("0lPxMirSIe0")
+})
+$("#c4a").click(function(){
+    changeVideo("TN8PWDxmLxE")
+})
+$("#c4b").click(function(){
+    changeVideo("XmfRmQpZQ54")
+})
+$("#d4a").click(function(){
+    changeVideo("MkkUgUantHs")
+})
+$("#s1a").click(function(){
+    changeVideo("6DYl_HUnsWc")
+})
+$("#s2a").click(function(){
+    changeVideo("4UacAYOKFvw")
+})
+$("#s3a").click(function(){
+    changeVideo("thgt6YemZcY")
+})
+$("#s3b").click(function(){
+    changeVideo("u-Pm1mWROsI")
+})
+$("#t1a").click(function(){
+    changeVideo("GkYQobqMxx4")
+})
+$("#t1b").click(function(){
+    changeVideo("2XrrGLbB18E")
+})
+$("#t2a").click(function(){
+    changeVideo("d4_FZpqDn38")
+})
+$("#t2b").click(function(){
+    changeVideo("eQb2FmQppLs")
+})
+$("#t2c").click(function(){
+    changeVideo("y3sGpL1slEM")
+})
+$("#t3a").click(function(){
+    changeVideo("rNt0faf_-eY")
+})
+$("#t3b").click(function(){
+    changeVideo("gNc2cw6L2HA")
+})
+$("#t4a").click(function(){
+    changeVideo("FvLS6lHvdqA")
+})
+$("#t4b").click(function(){
+    changeVideo("rl8yjj9LNgM")
+})
+$("#screen1").click(function(){
+    changeVideo("")
+})
+$("#screen2").click(function(){
+    changeVideo("")
+})
+$("#screen3").click(function(){
+    changeVideo("")
+})
+$("#screen4").click(function(){
+    changeVideo("")
+})

@@ -10,6 +10,13 @@
 </head>
 
 <body>
+    <div class="modal fade" role="dialog" tabindex="-1" id="video-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content"><div>
+    <iframe id="iframeYoutube" width="560" height="315" src="https://www.youtube.com/embed/l-8SCV6-fUw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></div>
+        </div>
+    </div>
     <div class="container">
         <div class="row justify-content-center" style="margin-top: 15px;margin-bottom: 15px;">
             <div class="col-9">
@@ -21,7 +28,7 @@
                     <div class="col-4"><a href="https://scholar.google.com/citations?hl=en&amp;user=YA_gt5EAAAAJ">Rohan Vijayan</a></div>
                 </div>
                 <div class="row text-center justify-content-center">
-                    <div class="col-4"><a href="https://scholar.google.com/citations?hl=en&amp;user=a3eRS3sAAAAJ">Venkata Akshintala</a></div>
+                    <div class="col-4"><a href="https://scholar.google.com/citations?hl=en&amp;user=a3eRS3sAAAAJ">Venkata S. Akshintala</a></div>
                     <div class="col-4"><a href="https://scholar.google.com/citations?user=AdiG_IAAAAAJ&amp;hl=en&amp;oi=sra">Juan R. Garcia</a></div>
                     <div class="col-4"><a href="https://scholar.google.com/citations?user=AdhZfSkAAAAJ&amp;hl=en">Nicholas J. Durr</a></div>
                 </div>
@@ -93,7 +100,8 @@
                                 <th>Model</th>
                                 <th>Texture</th>
                                 <th>Video</th>
-                                <th>Number of Frames</th>
+                                <th># Frames</th>
+                                <th></th>
                                 <th>Download</th>
                             </tr>
                         </thead>
@@ -103,6 +111,7 @@
                                 <td>1</td>
                                 <td>a</td>
                                 <td>276</td>
+                                <td id="c1a"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="https://drive.google.com/uc?export=view&amp;id=1nn4t7vPaZb5iKxg9UqoAG0lQXE1Co66e&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t1_a_under_review.zip</span></a>&nbsp;(2.65 GB)<br></td>
                             </tr>
                             <tr>
@@ -110,6 +119,7 @@
                                 <td>1</td>
                                 <td>b</td>
                                 <td>765</td>
+                                <td id="c1b"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1wnxc-Y53e-UalWmB_jyioDD0D0f71ujQ&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t1_b_under_review.zip</span></a>&nbsp;(7.13 GB)</td>
                             </tr>
                             <tr>
@@ -117,6 +127,7 @@
                                 <td>2</td>
                                 <td>a</td>
                                 <td>370</td>
+                                <td id="c2a"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1r84bezJw26-OtYiTq7er8R1Pcm7UMqvS&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t2_a_under_review.zip</span></a>&nbsp;(3.40 GB)</td>
                             </tr>
                             <tr>
@@ -124,6 +135,7 @@
                                 <td>2</td>
                                 <td>b</td>
                                 <td>1,142</td>
+                                <td id="c2b"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1tUDPPxYXnec1XYCPQzd0RHw0wSqL-v1T&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t2_b_under_review.zip</span></a>&nbsp;(10.40 GB)</td>
                             </tr>
                             <tr>
@@ -131,6 +143,7 @@
                                 <td>2</td>
                                 <td>c</td>
                                 <td>595</td>
+                                <td id="c2c"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1E_IKqNKb_fFog8A5QbLZBMD5Sz5uqPok&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t2_c_under_review.zip</span></a>&nbsp;(5.54 GB)</td>
                             </tr>
                             <tr>
@@ -138,6 +151,7 @@
                                 <td>3</td>
                                 <td>a</td>
                                 <td>730</td>
+                                <td id="c3a"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1T0emTHh7ier9Oyl1GatG89baH3boZ-w3&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t3_a_under_review.zip</span></a>&nbsp;(6.44 GB)</td>
                             </tr>
                             <tr>
@@ -145,6 +159,7 @@
                                 <td>4</td>
                                 <td>a</td>
                                 <td>465</td>
+                                <td id="c4a"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1JaEiAlekXyqeSfppIQjhpsTfPTwqMWA_&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t4_a_under_review.zip</span></a>&nbsp;(4.49 GB)</td>
                             </tr>
                             <tr>
@@ -152,6 +167,7 @@
                                 <td>4</td>
                                 <td>b</td>
                                 <td>425</td>
+                                <td id="c4b"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1QcgVZDoQ8dpYFrg7eWv6K-tUZb15EROr&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t4_b_under_review.zip</span></a>&nbsp;(4.08 GB)</td>
                             </tr>
                             <tr>
@@ -159,6 +175,7 @@
                                 <td>4</td>
                                 <td>a</td>
                                 <td>148</td>
+                                <td id="d4a"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=14BEjwZmXwneKLKrguekItfSfaCrkolXL&amp;confirm=t"><span style="color: rgb(0, 0, 0);">desc_t4_a_under_review.zip</span></a>&nbsp;(1.03 GB)</td>
                             </tr>
                             <tr>
@@ -166,6 +183,7 @@
                                 <td>1</td>
                                 <td>a</td>
                                 <td>700</td>
+                                <td id="s1a"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1c_sNnR60khdLUl-lFXBLniwClIN_Ijfs&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t1_a_under_review.zip</span></a>&nbsp;(5.11 GB)</td>
                             </tr>
                             <tr>
@@ -173,6 +191,7 @@
                                 <td>2</td>
                                 <td>a</td>
                                 <td>514</td>
+                                <td id="s2a"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1fmrGs1MaJ7YJhpljyiXdh8PpwyTNr8az&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t2_a_under_review.zip</span></a>&nbsp;(3.65 GB)</td>
                             </tr>
                             <tr>
@@ -180,6 +199,7 @@
                                 <td>3</td>
                                 <td>a</td>
                                 <td>613</td>
+                                <td id="s3a"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1xnxW2jY21uQypcJ6USz4hZaU3URYzUBd&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t3_a_under_review.zip</span></a>&nbsp;(4.51 GB)</td>
                             </tr>
                             <tr>
@@ -187,6 +207,7 @@
                                 <td>3</td>
                                 <td>b</td>
                                 <td>536</td>
+                                <td id="s3b"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1JwMB059w64RETEwmsXQvGbBSmnzzwUVO&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t3_b_under_review.zip</span></a>&nbsp;(4.18 GB)</td>
                             </tr>
                             <tr>
@@ -194,6 +215,7 @@
                                 <td>1</td>
                                 <td>a</td>
                                 <td>61</td>
+                                <td id="t1a"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1FDoCcT1iv4bPcUgYcQcf5b6-Hji5o0O-&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t1_a_under_review.zip</span></a>&nbsp;(0.50 GB)</td>
                             </tr>
                             <tr>
@@ -201,6 +223,7 @@
                                 <td>1</td>
                                 <td>b</td>
                                 <td>700</td>
+                                <td id="t1b"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1a_blVDpuRB9tIrRdwC1J5X4xtDGYWJ1P&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t1_b_under_review.zip</span></a>&nbsp;(4.28 GB)</td>
                             </tr>
                             <tr>
@@ -208,6 +231,7 @@
                                 <td>2</td>
                                 <td>a</td>
                                 <td>194</td>
+                                <td id="t2a"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1b4hFg6T2GywjEvNBb5gtmoVBmj_d6sSU&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t2_a_under_review.zip</span></a>&nbsp;(1.40 GB)</td>
                             </tr>
                             <tr>
@@ -215,6 +239,7 @@
                                 <td>2</td>
                                 <td>b</td>
                                 <td>103</td>
+                                <td id="t2b"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1BeI8HnKq7-xdaX93B1A8aU7zZGOTqqHc&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t2_b_under_review.zip</span></a>&nbsp;(0.81 GB)</td>
                             </tr>
                             <tr>
@@ -222,6 +247,7 @@
                                 <td>2</td>
                                 <td>c</td>
                                 <td>235</td>
+                                <td id="t2c"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1qjCUxLzFZo50JZVEFA1Z1O__fUiMJh__&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t2_c_under_review.zip</span></a>&nbsp;(1.48 GB)</td>
                             </tr>
                             <tr>
@@ -229,6 +255,7 @@
                                 <td>3</td>
                                 <td>a</td>
                                 <td>250</td>
+                                <td id="t3a"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1tmEyJVjmml2zOwDAn2Xm-hxAj4ldI5Wa&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t3_a_under_review.zip</span></a>&nbsp;(1.56 GB)</td>
                             </tr>
                             <tr>
@@ -236,6 +263,7 @@
                                 <td>3</td>
                                 <td>b</td>
                                 <td>214</td>
+                                <td id="t3b"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=11xtCzgBR1F6nvKmCmVGmNXDFG1soNIoQ&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t3_b_under_review.zip</span></a>&nbsp;(1.46 GB)</td>
                             </tr>
                             <tr>
@@ -243,6 +271,7 @@
                                 <td>4</td>
                                 <td>a</td>
                                 <td>382</td>
+                                <td id="t4a"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1Rz65xbPXa-U6g4qq3l46P90g7O6BCnqw&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t4_a_under_review.zip</span></a>&nbsp;(2.59 GB)</td>
                             </tr>
                             <tr>
@@ -250,6 +279,7 @@
                                 <td>4</td>
                                 <td>b</td>
                                 <td>597</td>
+                                <td id="t4b"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1eM2lHvzkKwBuEq5uLxoUBJci1Lwl6mGP&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t4_b_under_review.zip</span></a>&nbsp;(4.01 GB)</td>
                             </tr>
                         </tbody>
@@ -271,7 +301,8 @@
                             <tr>
                                 <th>Model</th>
                                 <th>Texture</th>
-                                <th>Number of Frames</th>
+                                <th># Frames</th>
+                                <th></th>
                                 <th>Download</th>
                             </tr>
                         </thead>
@@ -280,24 +311,28 @@
                                 <td>Full Colon</td>
                                 <td>1</td>
                                 <td>5,458</td>
+                                <td id="screen1"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=18m3Z5zJtljor_AGmPW8OgO9fRuactuNk&amp;confirm=t"><span style="color: rgb(0, 0, 0);">screening_t1_under_review.zip</span></a>&nbsp;(8.13 GB)</td>
                             </tr>
                             <tr>
                                 <td>Full Colon</td>
                                 <td>2</td>
                                 <td>5,100</td>
+                                <td id="screen2"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1kn_qevX7lLh3gWkiKAt3hgWFpy0P68s6&amp;confirm=t"><span style="color: rgb(0, 0, 0);">screening_t2_under_review.zip</span></a>&nbsp;(7.09 GB)</td>
                             </tr>
                             <tr>
                                 <td>Full Colon</td>
                                 <td>3</td>
                                 <td>4,726</td>
+                                <td id="screen3"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1RmOnnjJBzCMwO5gPY4h3e4MpcDDOvOb6&amp;confirm=t"><span style="color: rgb(0, 0, 0);">screening_t3_under_review.zip</span></a>&nbsp;(7.07 GB)</td>
                             </tr>
                             <tr>
                                 <td>Full Colon</td>
                                 <td>4</td>
                                 <td>4,774</td>
+                                <td id="screen4"><span style="text-decoration: underline;">Preview</span></td>
                                 <td><a href="http://drive.google.com/uc?export=view&amp;id=1sYps79WjJ0ETRtuWtHd_1zeuyPLtoMM7&amp;confirm=t"><span style="color: rgb(0, 0, 0);">screening_t4_under_review.zip</span></a>&nbsp;(7.36 GB)</td>
                             </tr>
                         </tbody>
@@ -353,17 +388,13 @@
                 </div>
             </div>
         </div>
-        <div class="row" style="margin-bottom: 8px;margin-top: 20px;">
-            <div class="col text-center">
-                <h2 class="text-center" id="code"><a href="https://github.com/DurrLab/C3VD">Registration Code Available on GitHub</a></h2><img src="assets/img/github.png">
-            </div>
-        </div>
         <div class="row" style="margin: 0px;">
             <div class="col text-center" style="margin: 0px;padding: 0px;margin-top: 20px;"><p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p></div>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/video-modal.js"></script>
 </body>
 
 </html>

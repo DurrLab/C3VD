@@ -16,3 +16,38 @@ a:hover {
   color: var(--bs-gray-800);
 }
 
+#modal1 .modal-content {
+  background: transparent;
+  border: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1055;
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+}
+
+.modal-dialog {
+  width: 560px;
+  /*max-width: 90%;*/
+  /*min-width: 600px;*/
+}
+
+.modal.dialog {
+  width: 560px;
+}
+
+.modal-dialog {
+  width: auto;
+  max-width: 560px;
+  max-height: 315px;
+  height: auto;
+}
+
