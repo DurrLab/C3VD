@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 function changeVideo(vId){
   var iframe=document.getElementById("iframeYoutube");
-  iframe.src="https://www.youtube.com/embed/"+vId;
+  iframe.src="https://www.youtube.com/embed/"+vId+"?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0&fs=0&loop=1";
   $("#video-modal").modal("show");
 }
 
@@ -77,14 +77,14 @@ $("#t4b").click(function(){
     changeVideo("rl8yjj9LNgM")
 })
 $("#screen1").click(function(){
-    changeVideo("")
+    changeVideo("i_D2epwoxt8")
 })
 $("#screen2").click(function(){
-    changeVideo("")
+    changeVideo("FB3wd9NNKY4")
 })
 $("#screen3").click(function(){
-    changeVideo("")
+    changeVideo("v_mQcKtZI2k")
 })
 $("#screen4").click(function(){
-    changeVideo("")
+    changeVideo("-612boxukyQ")
 })

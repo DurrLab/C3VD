@@ -21,19 +21,6 @@ a:hover {
   border: none;
 }
 
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1055;
-  display: none;
-  width: 100%;
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: auto;
-  outline: 0;
-}
-
 .modal-dialog {
   width: 560px;
   /*max-width: 90%;*/
@@ -49,5 +36,10 @@ a:hover {
   max-width: 560px;
   max-height: 315px;
   height: auto;
+}
+
+.modal-content {
+  background-color: rgba(0,0,0,0);
+  border: 0px;
 }
 
