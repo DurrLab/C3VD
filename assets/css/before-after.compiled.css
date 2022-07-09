@@ -1,0 +1,97 @@
+.before-after-container {
+  position: relative;
+  width: 560px;
+  height: 448px;
+}
+.before-after-container .img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 560px 100%;
+}
+.before-after-container .background-img {
+  background-image: url("../../assets/img/slider/depth.png");
+}
+.before-after-container .foreground-img {
+  background-image: url("../../assets/img/slider/color.png");
+  width: 50%;
+}
+
+.slider {
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(242, 242, 242, 0);
+  outline: none;
+  margin: 0;
+  transition: all 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider:hover {
+  background: rgba(242, 242, 242, 0);
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 6px;
+  height: 448px;
+  background: white;
+  cursor: pointer;
+}
+
+.slider-button {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  left: calc(50% - 18px);
+  top: calc(50% - 18px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-button:after {
+  content: "";
+  padding: 3px;
+  display: inline-block;
+  border: solid #5D5D5D;
+  border-width: 0 2px 2px 0;
+  transform: rotate(-45deg);
+}
+.slider-button:before {
+  content: "";
+  padding: 3px;
+  display: inline-block;
+  border: solid #5D5D5D;
+  border-width: 0 2px 2px 0;
+  transform: rotate(135deg);
+}
+
+.before-after-container .btn-array {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.before-after-container .btn-array .btn {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  box-shadow: none;
+  border-radius: 0px;
+  margin-right: -5px;
+}
+.before-after-container .btn-array .btn:active {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: none;
+}
+.before-after-container .btn-array .btn.focus {
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: none;
+}

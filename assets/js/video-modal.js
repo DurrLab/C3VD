@@ -6,7 +6,7 @@ $(document).ready(function(){
 
 function changeVideo(vId){
   var iframe=document.getElementById("iframeYoutube");
-  iframe.src="https://www.youtube.com/embed/"+vId+"?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0&fs=0&loop=1";
+  iframe.src="https://www.youtube.com/embed/"+vId+"?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=1&fs=0&loop=1";
   $("#video-modal").modal("show");
 }
 

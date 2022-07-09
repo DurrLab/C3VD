@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>C3VD</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/before-after.compiled.css">
     <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
@@ -64,13 +65,35 @@
 </pre>
             </div>
         </div>
-        <div class="row">
+        <div class="row g-0 text-center align-items-center">
+            <div class="col-auto m-auto">
+                <h2>Results</h2>
+                <p style="margin-bottom: 4px;"><span style="color: rgb(13, 13, 13);">Colonoscopy video frames (left) are registered with rendered views of a ground truth 3D model (right). Edge features (overlay) are aligned by optimizing a loss function (bottom).</span><br></p><div>
+    <iframe allowfullscreen frameborder="0" src="https://www.youtube-nocookie.com/embed/9uJQxTSCyo0/?rel=0&modestbranding=1&autohide=1&showinfo=0" width="560" height="560"></iframe>
+</div>
+                <p style="margin-top: 30px;margin-bottom: 4px;">Real colonoscope frames are paired with registered ground truth depth, surface normals, occlusion, and optical flow frames<br></p><div style="text-align: center; display: flex; justify-content: center;">
+    <div class='before-after-container'>
+        <div class='img background-img'></div>
+        <div class='img foreground-img'></div>
+        <input type="range" min="1" max="100" value="50" class="slider" name='slider' id="slider">
+        <div class='slider-button'></div>
+        <div class='btn-array'>
+            <button class = "btn depth focus">Depth</button>
+            <button class = "btn normals">Normals</button>
+            <button class = "btn occlusion">Occlusion</button>
+            <button class = "btn flow">Flow</button>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 30px;">
             <div class="col">
                 <h1 class="text-center">Dataset</h1>
                 <p>C3VD contains 22 <a href="#registered">registered videos</a> with paired ground truth depth, surface normals, optical flow, occlusion, six degree-of-freedom pose, coverage maps, and 3D models. The dataset also includes 4 <a href="#screening">screening colonoscopy videos</a> acquired by a gastroenterologist with paired ground truth pose and 3D surface models. <a href="#models">3D model files and molds</a> are also available for download. <a href="#code">Registration and rendering code</a> is made available on GitHub. <em>Files&nbsp;are tagged with "under_review" until peer review is complete, at which point this page will be updated with the final files.</em><br></p>
             </div>
         </div>
-        <h2 class="text-center" id="registered" style="margin: 0px;margin-top: 20px;margin-bottom: 8px;">Registered Videos</h2>
+        <h2 class="text-center" id="registered-1" style="margin: 0px;margin-top: 20px;margin-bottom: 8px;">Registered Videos</h2>
         <div class="row">
             <div class="col">
                 <p style="margin-bottom: 0px;">For each registered video frame, the dataset includes:</p>
@@ -391,10 +414,10 @@
         <h2 class="text-center" style="margin: 0px;margin-top: 20px;margin-bottom: 8px;">Calibration Files</h2>
         <div class="row justify-content-center">
             <div class="col-auto">
-                <p><a href="http://drive.google.com/uc?export=view&amp;id=1ZTNyLx0p19U2Q3vl8dUe2YxxxA-9WisI&amp;confirm=t">cfhq190l_checkerboard_images.zip</a></p>
+                <p><a href="http://drive.google.com/uc?export=view&amp;id=1ZTNyLx0p19U2Q3vl8dUe2YxxxA-9WisI&amp;confirm=t">cfhq190l_10x10mm_checkerboard_images.zip</a></p>
             </div>
             <div class="col-auto">
-                <p><a href="http://drive.google.com/uc?export=view&amp;id=1_u7uH5wydb51afE_jcPgSv8lSNSiH8rU&amp;confirm=t">cfhq190l_omnidirectional_params.txt</a></p>
+                <p><a href="http://drive.google.com/uc?export=view&amp;id=1gUA7mAM7DSD9oCvPH1hgQ0s2hhg1kOaC&amp;confirm=t">cfhq190l_omnidirectional_params.zip</a></p>
             </div>
         </div>
         <div class="row justify-content-center">
@@ -408,6 +431,7 @@
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/before-after.js"></script>
     <script src="assets/js/video-modal.js"></script>
 </body>
 
