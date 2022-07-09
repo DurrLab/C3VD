@@ -4,7 +4,6 @@ $("#slider").on("input change", (e)=>{
     $('.foreground-img').css('width', `${sliderPos}%`)
     // Update the position of the slider button
     $('.slider-button').css('left', `calc(${sliderPos}% - 18px)`)
-    $('.before-after-container.background-img').css('background-image', 'url("slider/normals.png")')    
 });
 
 $(".btn.depth").on('click', function(event){
