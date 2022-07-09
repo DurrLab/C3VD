@@ -12,26 +12,26 @@ $(".btn.depth").on('click', function(event){
     $(".btn.normals").removeClass('focus')
     $(".btn.occlusion").removeClass('focus')
     $(".btn.flow").removeClass('focus')
-    $('.background-img').css('background-image', 'url("./../assets/img/slider/depth.png")')    
+    $('.background-img').css('background-image', 'url("../../assets/img/slider/depth.png")')    
 });
 $(".btn.normals").on('click', function(event){
     $(".btn.depth").removeClass('focus')
     $(".btn.normals").addClass('focus')
     $(".btn.occlusion").removeClass('focus')
     $(".btn.flow").removeClass('focus')
-    $('.background-img').css('background-image', 'url("./../assets/img/slider/normals.png")')    
+    $('.background-img').css('background-image', 'url("../../assets/img/slider/normals.png")')    
 });
 $(".btn.occlusion").on('click', function(event){
     $(".btn.depth").removeClass('focus')
     $(".btn.normals").removeClass('focus')
     $(".btn.occlusion").addClass('focus')
     $(".btn.flow").removeClass('focus')
-    $('.background-img').css('background-image', 'url("./../assets/img/slider/occlusion.png")')    
+    $('.background-img').css('background-image', 'url("../../assets/img/slider/occlusion.png")')    
 });
 $(".btn.flow").on('click', function(event){
     $(".btn.depth").removeClass('focus')
     $(".btn.normals").removeClass('focus')
     $(".btn.occlusion").removeClass('focus')
     $(".btn.flow").addClass('focus')
-    $('.background-img').css('background-image', 'url("./../assets/img/slider/flow.png")')    
+    $('.background-img').css('background-image', 'url("../../assets/img/slider/flow.png")')    
 });
