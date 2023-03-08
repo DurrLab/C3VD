@@ -106,7 +106,7 @@
             <div class="col">
                 <ul>
                     <li><strong>Occlusion frame:&nbsp;</strong>encoded as an 8-bit binary image. Pixels occluding other mesh faces within 100mm of the camera origin are assigned a value of 255, and all other pixels are assigned a value of 0.<br></li>
-                    <li><strong>Camera pose:&nbsp;</strong>&nbsp;saved in a file named pose.txt. Each line contains a homogenous pose (flattened in row-major order) corresponding to each frame.</li>
+                    <li><strong>Camera pose:&nbsp;</strong>&nbsp;saved in a file named pose.txt. Each line contains a homogenous&nbsp;<span style="color: rgb(36, 41, 47);">camera-to-world transformation matrix</span>&nbsp;(flattened in row-major order) corresponding to each frame.</li>
                 </ul>
                 <p style="margin-bottom: 0px;">For each video sequence, we also provide:<br></p>
                 <ul>
@@ -412,16 +412,12 @@
             </div>
         </div>
         <h2 class="text-center" style="margin: 0px;margin-top: 20px;margin-bottom: 8px;">Calibration Files</h2>
-        <p>We adopt a non-linear spherical camera model by <a href="https://rpg.ifi.uzh.ch/docs/IROS06_scaramuzza.pdf">Scaramuzza et al.</a> that enables modeling of the entire colonoscope field of view.&nbsp;The camera model parameters and usage are defined in our paper; the authors of the camera model also have a nice description on <a href="https://sites.google.com/site/scarabotix/ocamcalib-omnidirectional-camera-calibration-toolbox-for-matlab">their webpage</a>. The omnidirectional calibration parameters are available for download below.&nbsp;<em>Note that a1 is typically assumed to be 0 and excluded from the model</em>.<br><br>We also include parameters calibrated using a pinhole camera model for download below. Checkerboard images are available for download so that you can run your own calibration for any camera model.</p>
         <div class="row justify-content-center">
             <div class="col-auto">
                 <p><a href="http://drive.google.com/uc?export=view&amp;id=1ZTNyLx0p19U2Q3vl8dUe2YxxxA-9WisI&amp;confirm=t">cfhq190l_10x10mm_checkerboard_images.zip</a></p>
             </div>
             <div class="col-auto">
                 <p><a href="http://drive.google.com/uc?export=view&amp;id=1gUA7mAM7DSD9oCvPH1hgQ0s2hhg1kOaC&amp;confirm=t">cfhq190l_omnidirectional_params.zip</a></p>
-            </div>
-            <div class="col-auto">
-                <p><a href="http://drive.google.com/uc?export=view&amp;id=1C9D73FFbt0of8nIpZhqWzA_w0YfIlY4J&amp;confirm=t">cfhq190l_pinhole_params.zip</a></p>
             </div>
         </div>
         <div class="row justify-content-center">
