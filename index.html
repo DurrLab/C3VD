@@ -55,7 +55,7 @@
             </div>
             <div class="col-md-9">
                 <h2><span style="color: rgb(51, 51, 51);">Citation</span></h2>
-                <p><span style="color: rgb(51, 51, 51);">Please cite our publication if you use code or data from this site.</span><br></p><pre style="background-color:#f0f0f0; padding:10px; border-radius:3px;">
+                <p><span style="color: rgb(51, 51, 51);">Please cite our publication if you use code or data from this site.</span><br></p><pre style="background-color: #f0f0f0;padding: 10px;border-radius: 3px;">
 <code class="language-latex">@article{bobrow2022,
     title = {Colonoscopy 3D Video Dataset with Paired Depth from 2D-3D Registration},
     author = {Taylor L. Bobrow, Mayank Golhar, Rohan Vijayan, Venkata Akshintala, Juan R. Garcia, Nicholas J. Durr},
@@ -71,7 +71,7 @@
                 <p style="margin-bottom: 4px;"><span style="color: rgb(13, 13, 13);">Colonoscopy video frames (left) are registered with rendered views of a ground truth 3D model (right). Edge features (overlay) are aligned by optimizing a loss function (bottom).</span><br></p><div>
     <iframe allowfullscreen frameborder="0" src="https://www.youtube-nocookie.com/embed/9uJQxTSCyo0/?rel=0&modestbranding=1&autohide=1&showinfo=0" width="560" height="560"></iframe>
 </div>
-                <p style="margin-top: 30px;margin-bottom: 4px;">Real colonoscope frames are paired with registered ground truth depth, surface normals, occlusion, and optical flow frames<br></p><div style="text-align: center; display: flex; justify-content: center;">
+                <p style="margin-top: 30px;margin-bottom: 4px;">Real colonoscope frames are paired with registered ground truth depth, surface normals, occlusion, and optical flow frames<br></p><div style="text-align: center;display: flex;justify-content: center;">
     <div class='before-after-container'>
         <div class='img background-img'></div>
         <div class='img foreground-img'></div>
@@ -99,7 +99,7 @@
                 <p style="margin-bottom: 0px;">For each registered video frame, the dataset includes:</p>
                 <ul>
                     <li><strong>Depth frame:&nbsp;</strong>depth along the camera frame’s z-axis, clamped from 0-100 millimeters. Values are linearly scaled and encoded as a 16-bit grayscale image.<br></li>
-                    <li><strong>Surface normal frame:&nbsp;</strong>reported with respect to the camera coordinate system. X/Y/Z components are stored in separate R/G/B color channels. X/Y components are linearly scaled from ± 1 to 0-65535, and the Z component is linearly scaled from 0-1 to 0-65535. Values are encoded as a 16-bit color image.<br></li>
+                    <li><strong>Surface normal frame:&nbsp;</strong>reported with respect to the camera coordinate system. X/Y/Z components are stored in separate R/G/B color channels. Components are linearly scaled from ± 1 to 0-65535. Values are encoded as a 16-bit color image.</li>
                     <li><strong>Optical flow frame:&nbsp;</strong>computed flowing from the current frame to the previous frame, meaning the first frame in the sequence has no value. Values are saved in a color image, where the R-channel contains X-direction motion (left→right, -20 to 20 pixels), and the G-channel contains Y-direction motion (up→down, -20 to 20 pixels). Values are linearly scaled from 0 to 65535 and encoded as a 16-bit color image.<br></li>
                 </ul>
             </div>
@@ -110,7 +110,7 @@
                 </ul>
                 <p style="margin-bottom: 0px;">For each video sequence, we also provide:<br></p>
                 <ul>
-                    <li><strong>3D model and coverage map:</strong> ground truth triangulated mesh, stored as a Wavefront OBJ file named outputMesh.obj. Coverage is embedded in the OBJ file by texture vertices assigned to each face (vt=1 is observed, vt=2 is unobserved).</li>
+                    <li><strong>3D model and coverage map:</strong> ground truth triangulated mesh, stored as a Wavefront OBJ file named coverage_mesh.obj. Coverage is embedded in the OBJ file by texture vertices assigned to each face (vt=1 is observed, vt=2 is unobserved).</li>
                 </ul>
             </div>
         </div>
@@ -135,7 +135,7 @@
                                 <td>a</td>
                                 <td>276</td>
                                 <td id="c1a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="https://drive.google.com/uc?export=view&amp;id=1nn4t7vPaZb5iKxg9UqoAG0lQXE1Co66e&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t1_a_under_review.zip</span></a>&nbsp;(2.65 GB)<br></td>
+                                <td><a href="https://drive.google.com/uc?export=view&amp;id=1nn4t7vPaZb5iKxg9UqoAG0lQXE1Co66e&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t1_a_under_review.zip</span></a>&nbsp;(2.72 GB)</td>
                             </tr>
                             <tr>
                                 <td>Cecum</td>
@@ -143,7 +143,7 @@
                                 <td>b</td>
                                 <td>765</td>
                                 <td id="c1b"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1wnxc-Y53e-UalWmB_jyioDD0D0f71ujQ&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t1_b_under_review.zip</span></a>&nbsp;(7.13 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1wnxc-Y53e-UalWmB_jyioDD0D0f71ujQ&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t1_b_under_review.zip</span></a>&nbsp;(7.28 GB)</td>
                             </tr>
                             <tr>
                                 <td>Cecum</td>
@@ -151,7 +151,7 @@
                                 <td>a</td>
                                 <td>370</td>
                                 <td id="c2a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1r84bezJw26-OtYiTq7er8R1Pcm7UMqvS&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t2_a_under_review.zip</span></a>&nbsp;(3.40 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1r84bezJw26-OtYiTq7er8R1Pcm7UMqvS&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t2_a_under_review.zip</span></a>&nbsp;(3.45 GB)</td>
                             </tr>
                             <tr>
                                 <td>Cecum</td>
@@ -159,7 +159,7 @@
                                 <td>b</td>
                                 <td>1,142</td>
                                 <td id="c2b"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1tUDPPxYXnec1XYCPQzd0RHw0wSqL-v1T&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t2_b_under_review.zip</span></a>&nbsp;(10.40 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1tUDPPxYXnec1XYCPQzd0RHw0wSqL-v1T&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t2_b_under_review.zip</span></a>&nbsp;(10.61 GB)</td>
                             </tr>
                             <tr>
                                 <td>Cecum</td>
@@ -167,7 +167,7 @@
                                 <td>c</td>
                                 <td>595</td>
                                 <td id="c2c"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1E_IKqNKb_fFog8A5QbLZBMD5Sz5uqPok&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t2_c_under_review.zip</span></a>&nbsp;(5.54 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1E_IKqNKb_fFog8A5QbLZBMD5Sz5uqPok&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t2_c_under_review.zip</span></a>&nbsp;(5.64 GB)</td>
                             </tr>
                             <tr>
                                 <td>Cecum</td>
@@ -175,7 +175,7 @@
                                 <td>a</td>
                                 <td>730</td>
                                 <td id="c3a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1T0emTHh7ier9Oyl1GatG89baH3boZ-w3&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t3_a_under_review.zip</span></a>&nbsp;(6.44 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1T0emTHh7ier9Oyl1GatG89baH3boZ-w3&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t3_a_under_review.zip</span></a>&nbsp;(6.51 GB)</td>
                             </tr>
                             <tr>
                                 <td>Cecum</td>
@@ -183,7 +183,7 @@
                                 <td>a</td>
                                 <td>465</td>
                                 <td id="c4a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1JaEiAlekXyqeSfppIQjhpsTfPTwqMWA_&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t4_a_under_review.zip</span></a>&nbsp;(4.49 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1JaEiAlekXyqeSfppIQjhpsTfPTwqMWA_&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t4_a_under_review.zip</span></a>&nbsp;(4.58 GB)</td>
                             </tr>
                             <tr>
                                 <td>Cecum</td>
@@ -191,7 +191,7 @@
                                 <td>b</td>
                                 <td>425</td>
                                 <td id="c4b"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1QcgVZDoQ8dpYFrg7eWv6K-tUZb15EROr&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t4_b_under_review.zip</span></a>&nbsp;(4.08 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1QcgVZDoQ8dpYFrg7eWv6K-tUZb15EROr&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t4_b_under_review.zip</span></a>&nbsp;(4.17 GB)</td>
                             </tr>
                             <tr>
                                 <td>Descending Colon</td>
@@ -199,7 +199,7 @@
                                 <td>a</td>
                                 <td>148</td>
                                 <td id="d4a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=14BEjwZmXwneKLKrguekItfSfaCrkolXL&amp;confirm=t"><span style="color: rgb(0, 0, 0);">desc_t4_a_under_review.zip</span></a>&nbsp;(1.03 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=14BEjwZmXwneKLKrguekItfSfaCrkolXL&amp;confirm=t"><span style="color: rgb(0, 0, 0);">desc_t4_a_under_review.zip</span></a>&nbsp;(1.04 GB)</td>
                             </tr>
                             <tr>
                                 <td>Sigmoid Colon</td>
@@ -207,7 +207,7 @@
                                 <td>a</td>
                                 <td>700</td>
                                 <td id="s1a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1c_sNnR60khdLUl-lFXBLniwClIN_Ijfs&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t1_a_under_review.zip</span></a>&nbsp;(5.11 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1c_sNnR60khdLUl-lFXBLniwClIN_Ijfs&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t1_a_under_review.zip</span></a>&nbsp;(4.55 GB)</td>
                             </tr>
                             <tr>
                                 <td>Sigmoid Colon</td>
@@ -215,7 +215,7 @@
                                 <td>a</td>
                                 <td>514</td>
                                 <td id="s2a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1fmrGs1MaJ7YJhpljyiXdh8PpwyTNr8az&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t2_a_under_review.zip</span></a>&nbsp;(3.65 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1fmrGs1MaJ7YJhpljyiXdh8PpwyTNr8az&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t2_a_under_review.zip</span></a>&nbsp;(3.75 GB)</td>
                             </tr>
                             <tr>
                                 <td>Sigmoid Colon</td>
@@ -223,7 +223,7 @@
                                 <td>a</td>
                                 <td>613</td>
                                 <td id="s3a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1xnxW2jY21uQypcJ6USz4hZaU3URYzUBd&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t3_a_under_review.zip</span></a>&nbsp;(4.51 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1xnxW2jY21uQypcJ6USz4hZaU3URYzUBd&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t3_a_under_review.zip</span></a>&nbsp;(3.98 GB)</td>
                             </tr>
                             <tr>
                                 <td>Sigmoid Colon</td>
@@ -231,7 +231,7 @@
                                 <td>b</td>
                                 <td>536</td>
                                 <td id="s3b"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1JwMB059w64RETEwmsXQvGbBSmnzzwUVO&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t3_b_under_review.zip</span></a>&nbsp;(4.18 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1JwMB059w64RETEwmsXQvGbBSmnzzwUVO&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t3_b_under_review.zip</span></a>&nbsp;(3.76 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -239,7 +239,7 @@
                                 <td>a</td>
                                 <td>61</td>
                                 <td id="t1a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1FDoCcT1iv4bPcUgYcQcf5b6-Hji5o0O-&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t1_a_under_review.zip</span></a>&nbsp;(0.50 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1FDoCcT1iv4bPcUgYcQcf5b6-Hji5o0O-&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t1_a_under_review.zip</span></a>&nbsp;(0.51 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -247,7 +247,7 @@
                                 <td>b</td>
                                 <td>700</td>
                                 <td id="t1b"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1a_blVDpuRB9tIrRdwC1J5X4xtDGYWJ1P&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t1_b_under_review.zip</span></a>&nbsp;(4.28 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1a_blVDpuRB9tIrRdwC1J5X4xtDGYWJ1P&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t1_b_under_review.zip</span></a>&nbsp;(4.33 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -255,7 +255,7 @@
                                 <td>a</td>
                                 <td>194</td>
                                 <td id="t2a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1b4hFg6T2GywjEvNBb5gtmoVBmj_d6sSU&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t2_a_under_review.zip</span></a>&nbsp;(1.40 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1b4hFg6T2GywjEvNBb5gtmoVBmj_d6sSU&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t2_a_under_review.zip</span></a>&nbsp;(1.42 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -263,7 +263,7 @@
                                 <td>b</td>
                                 <td>103</td>
                                 <td id="t2b"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1BeI8HnKq7-xdaX93B1A8aU7zZGOTqqHc&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t2_b_under_review.zip</span></a>&nbsp;(0.81 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1BeI8HnKq7-xdaX93B1A8aU7zZGOTqqHc&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t2_b_under_review.zip</span></a>&nbsp;(0.83 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -271,7 +271,7 @@
                                 <td>c</td>
                                 <td>235</td>
                                 <td id="t2c"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1qjCUxLzFZo50JZVEFA1Z1O__fUiMJh__&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t2_c_under_review.zip</span></a>&nbsp;(1.48 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1qjCUxLzFZo50JZVEFA1Z1O__fUiMJh__&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t2_c_under_review.zip</span></a>&nbsp;(1.50 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -279,7 +279,7 @@
                                 <td>a</td>
                                 <td>250</td>
                                 <td id="t3a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1tmEyJVjmml2zOwDAn2Xm-hxAj4ldI5Wa&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t3_a_under_review.zip</span></a>&nbsp;(1.56 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1tmEyJVjmml2zOwDAn2Xm-hxAj4ldI5Wa&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t3_a_under_review.zip</span></a>&nbsp;(1.58 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -287,7 +287,7 @@
                                 <td>b</td>
                                 <td>214</td>
                                 <td id="t3b"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=11xtCzgBR1F6nvKmCmVGmNXDFG1soNIoQ&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t3_b_under_review.zip</span></a>&nbsp;(1.46 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=11xtCzgBR1F6nvKmCmVGmNXDFG1soNIoQ&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t3_b_under_review.zip</span></a>&nbsp;(1.49 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -295,7 +295,7 @@
                                 <td>a</td>
                                 <td>382</td>
                                 <td id="t4a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1Rz65xbPXa-U6g4qq3l46P90g7O6BCnqw&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t4_a_under_review.zip</span></a>&nbsp;(2.59 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1Rz65xbPXa-U6g4qq3l46P90g7O6BCnqw&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t4_a_under_review.zip</span></a>&nbsp;(2.61 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -303,7 +303,7 @@
                                 <td>b</td>
                                 <td>597</td>
                                 <td id="t4b"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1eM2lHvzkKwBuEq5uLxoUBJci1Lwl6mGP&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t4_b_under_review.zip</span></a>&nbsp;(4.01 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1eM2lHvzkKwBuEq5uLxoUBJci1Lwl6mGP&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t4_b_under_review.zip</span></a>&nbsp;(4.10 GB)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -420,13 +420,24 @@
                 <p><a href="http://drive.google.com/uc?export=view&amp;id=1gUA7mAM7DSD9oCvPH1hgQ0s2hhg1kOaC&amp;confirm=t">cfhq190l_omnidirectional_params.zip</a></p>
             </div>
         </div>
+        <div class="row">
+            <div class="col">
+                <h2 class="text-center" id="screening-1" style="margin: 0px;margin-top: 20px;margin-bottom: 8px;"><span style="color: var(--bs-gray-800);">Revision History</span></h2>
+                <p><em>05/03/2023 |&nbsp;Rvised ground truth surface normal frames and updated naming convention:</em></p>
+                <ul>
+                    <li>Corrected an error in the rendering code clipped negative surface normal z-components to 0 and resulted in some surface normals having a non-unitary length.</li>
+                    <li>Surface normal axes were updated from +x pointing right, +y pointing up, and +z pointing out of the screen to +x pointing right, +y pointing down, and +z pointing into the screen to be consistent with the camera coordinate system as shown in Figure 3 of the paper.</li>
+                    <li>The naming convention of the frames was updated to include zero padding (e.g. <em>0005_color.png</em>).</li>
+                </ul>
+            </div>
+        </div>
         <div class="row justify-content-center">
             <div class="col-auto text-center">
                 <h2 class="text-center" id="code" style="margin: 0px;margin-top: 20px;margin-bottom: 8px;"><a href="https://github.com/DurrLab/C3VD">Registration and Rendering Code Available on GitHub</a></h2><img src="assets/img/github.png">
             </div>
         </div>
         <div class="row" style="margin: 0px;">
-            <div class="col text-center" style="margin: 0px;padding: 0px;margin-top: 40px;"><p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p></div>
+            <div class="col text-center" style="margin: 0px;padding: 0px;margin-top: 40px;"><p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display: inline-block;">CC BY-NC-SA 4.0<img style="height: 22px!important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height: 22px!important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height: 22px!important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height: 22px!important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p></div>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>

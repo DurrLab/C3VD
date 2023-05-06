@@ -11,70 +11,70 @@ function changeVideo(vId){
 }
 
 $("#c1a").click(function(){
-    changeVideo("FRY5wZsJZno")
+    changeVideo("esEBiCIfDUY")
 })
 $("#c1b").click(function(){
-    changeVideo("anGQFIE0IYY")
+    changeVideo("atjrygVuUmU")
 })
 $("#c2a").click(function(){
-    changeVideo("vnM0b4RpjL8")
+    changeVideo("h8oLhvG2kog")
 })
 $("#c2b").click(function(){
-    changeVideo("IGDDjcxQejQ")
+    changeVideo("GBtRipJ2zAs")
 })
 $("#c2c").click(function(){
-    changeVideo("v70HxbThe6w")
+    changeVideo("ryAwRXJ9dYU")
 })
 $("#c3a").click(function(){
-    changeVideo("0lPxMirSIe0")
+    changeVideo("qZ12JdHU1es")
 })
 $("#c4a").click(function(){
-    changeVideo("TN8PWDxmLxE")
+    changeVideo("rsX_jeobzbA")
 })
 $("#c4b").click(function(){
-    changeVideo("XmfRmQpZQ54")
+    changeVideo("zqD3qsnOkic")
 })
 $("#d4a").click(function(){
-    changeVideo("MkkUgUantHs")
+    changeVideo("dQLlzx6lBTE")
 })
 $("#s1a").click(function(){
-    changeVideo("6DYl_HUnsWc")
+    changeVideo("flhT2kCXa4c")
 })
 $("#s2a").click(function(){
-    changeVideo("4UacAYOKFvw")
+    changeVideo("BCFzjgTAbq0")
 })
 $("#s3a").click(function(){
-    changeVideo("thgt6YemZcY")
+    changeVideo("Vu_J_j4e6-U")
 })
 $("#s3b").click(function(){
-    changeVideo("u-Pm1mWROsI")
+    changeVideo("gDyYHGcAwJE")
 })
 $("#t1a").click(function(){
-    changeVideo("GkYQobqMxx4")
+    changeVideo("WuCjvJ1Dx9M")
 })
 $("#t1b").click(function(){
-    changeVideo("2XrrGLbB18E")
+    changeVideo("sE04yM-TMWk")
 })
 $("#t2a").click(function(){
-    changeVideo("d4_FZpqDn38")
+    changeVideo("kxCAbejwwlQ")
 })
 $("#t2b").click(function(){
-    changeVideo("eQb2FmQppLs")
+    changeVideo("Pdr7Y3uCyYE")
 })
 $("#t2c").click(function(){
-    changeVideo("y3sGpL1slEM")
+    changeVideo("ySCoXwM0Nrg")
 })
 $("#t3a").click(function(){
-    changeVideo("rNt0faf_-eY")
+    changeVideo("hFzc7p1tzHg")
 })
 $("#t3b").click(function(){
-    changeVideo("gNc2cw6L2HA")
+    changeVideo("gasn68GNHD8")
 })
 $("#t4a").click(function(){
-    changeVideo("FvLS6lHvdqA")
+    changeVideo("lELJRIanN78")
 })
 $("#t4b").click(function(){
-    changeVideo("rl8yjj9LNgM")
+    changeVideo("H8TGO44c5_I")
 })
 $("#screen1").click(function(){
     changeVideo("i_D2epwoxt8")
