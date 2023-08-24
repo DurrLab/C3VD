@@ -1,0 +1,12 @@
+[submodule "external/glm"]
+	path = external/glm
+	url = https://github.com/g-truc/glm.git
+[submodule "external/owl"]
+	path = external/owl
+	url = https://github.com/owl-project/owl.git
+[submodule "external/pangolin"]
+	path = external/pangolin
+	url = https://github.com/stevenlovegrove/Pangolin.git
+[submodule "external/tinytiff"]
+	path = external/tinytiff
+	url = https://github.com/jkriege2/TinyTIFF.git
