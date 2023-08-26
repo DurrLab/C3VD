@@ -73,10 +73,9 @@ To run the program:
 ```
 ./c3vd align <SAMPLE_DIR>
 ```
-Parameters can be manipulated using inputs on the GUI window or using the keyboard. Press 'i' to print the keyboard input key to the terminal window.
+Parameters can be manipulated using inputs on the GUI window or keyboard. Press 'i' to print the keyboard input key to the terminal window.
 
-### Registration
-<COMING SOON>
+### Registration (COMING SOON)
 After updating the <modelTransform></modelTransform> parameters in the configuration file with the model transform values from the alignment GUI, an optimization can be run to fine-tune the video alignment. In addition to the configuration parameters listed above, the following parameters should be added to the configuration file before running the registration program:
 - *deltaR*: +/- parameter space bounds for rotation components of model position (radians)
 - *deltaT*: +/- parameter space bounds for translation components of model position (millimeters)
