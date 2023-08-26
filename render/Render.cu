@@ -123,7 +123,7 @@ OPTIX_CLOSEST_HIT_PROGRAM(primary)()
     if (dot(dir,Nw) > 0.0) Nw = -Nw;
 
     /* Transform normal to screen space. */
-    glm::vec3 Ns = glm::normalize(glm::vec3(glm::vec4(Nw,1.0)*optixLaunchParams.t_curr));
+    glm::vec3 Ns = glm::normalize(glm::mat3(glm::inverse(optixLaunchParams.t_curr))*Nw);
 
     /* Diffuse shading. */
     float diffuse = 0.1f + 0.9f*abs(dot(-1.f*Nw,dir));
