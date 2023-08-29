@@ -75,6 +75,10 @@ To run the program:
 ```
 Parameters can be manipulated using inputs on the GUI window or keyboard. Press 'i' to print the keyboard input key to the terminal window.
 
+<p align="center">
+  <img src="https://github.com/DurrLab/C3VD/blob/gh-pages/assets/img/alignmentGui.png" alt="ply" width=320/>
+</p>
+
 ### Registration (COMING SOON)
 After updating the <modelTransform></modelTransform> parameters in the configuration file with the model transform values from the alignment GUI, an optimization can be run to fine-tune the video alignment. In addition to the configuration parameters listed above, the following parameters should be added to the configuration file before running the registration program:
 - *deltaR*: +/- parameter space bounds for rotation components of model position (radians)
