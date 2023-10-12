@@ -137,8 +137,9 @@ Model *loadOBJ(const std::string &objFile)
     if (!readOK)
         throw std::runtime_error("Could not read OBJ model from "+objFile+" : "+err);
 
-    if (materials.empty())
-        throw std::runtime_error("could not parse materials ...");
+    /* We only render primitives - no need to render material/texture. */
+    // if (materials.empty())
+    //     throw std::runtime_error("could not parse materials ...");
 
     std::cout << "Done loading obj file - found " << shapes.size() << " shapes with " << materials.size() << " materials" << std::endl;
     for (int shapeID=0;shapeID<(int)shapes.size();shapeID++) {
