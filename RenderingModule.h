@@ -81,6 +81,10 @@ class RenderingModule
         std::vector<float> modelTransformR6;
         float poseStartTime;
 
+        /* Image w/ no alpha device memory. */
+        uint16_t *normalsNoAlpha_dev;
+        uint16_t *flowNoAlpha_dev;
+
         /* Image host memory. */
         uint16_t *depth_host;
         uint16_t *normals_host;

@@ -4,7 +4,6 @@
  *
  *	Author:     Taylor Bobrow, Johns Hopkins University (2023)
  * 
- *  To-do:      Remove alpha channels from output frames.
  */
 
 #include "RenderingModule.h"
@@ -15,6 +14,7 @@
 
 #include "render/Intrinsics.h"
 #include "render/RenderFlags.h"
+#include "render/Rgba2rgb.cuh"
 #include "render/TransformFlags.h"
 #include "tools/ConfigParser.h"
 
@@ -76,6 +76,10 @@ RenderingModule::RenderingModule(int argc, char* argv[])
 
     context->updateMeshTransform(T_final);
 
+    /* Allocate device memory for image data w/ alpha channel removed. */
+    cudaMalloc((void**) &normalsNoAlpha_dev, sizeof(uint16_t)*width*height*3);
+    cudaMalloc((void**) &flowNoAlpha_dev,    sizeof(uint16_t)*width*height*3);
+
     /* Allocate host memory for rendered image data. */
     depth_host      = (uint16_t*)malloc(width*height*1*sizeof(uint16_t));
     normals_host    = (uint16_t*)malloc(width*height*4*sizeof(uint16_t));
@@ -96,6 +100,8 @@ RenderingModule::~RenderingModule(void)
     delete model;
     delete poseLog;
     delete context;
+    cudaFree(normalsNoAlpha_dev);
+    cudaFree(flowNoAlpha_dev);
     free(depth_host);
     free(normals_host);
     free(flow_host);
@@ -133,10 +139,14 @@ void RenderingModule::launch(void)
         mask->apply((uint64_t*)owlBufferGetPointer(context->fbFlow,0));
         mask->apply((uint8_t*) owlBufferGetPointer(context->fbOcclusion,0));
 
+        /* Remove alpha channel from normals/flow. */
+        rgba2Rgb((uint16_t*)owlBufferGetPointer(context->fbNormals,0),normalsNoAlpha_dev,width,height);
+        rgba2Rgb((uint16_t*)owlBufferGetPointer(context->fbFlow,0),flowNoAlpha_dev,width,height);
+
         /* Copy rendering data from device to host. */
         cudaMemcpy(depth_host,owlBufferGetPointer(context->fbDepth,0),width*height*1*sizeof(uint16_t),cudaMemcpyDeviceToHost);
-        cudaMemcpy(normals_host,owlBufferGetPointer(context->fbNormals,0),width*height*4*sizeof(uint16_t),cudaMemcpyDeviceToHost);
-        cudaMemcpy(flow_host,owlBufferGetPointer(context->fbFlow,0),width*height*4*sizeof(uint16_t),cudaMemcpyDeviceToHost);
+        cudaMemcpy(normals_host,normalsNoAlpha_dev,width*height*3*sizeof(uint16_t),cudaMemcpyDeviceToHost);
+        cudaMemcpy(flow_host,flowNoAlpha_dev,width*height*3*sizeof(uint16_t),cudaMemcpyDeviceToHost);
         cudaMemcpy(occlusion_host,owlBufferGetPointer(context->fbOcclusion,0),width*height*1*sizeof(uint8_t),cudaMemcpyDeviceToHost);
 
         /* Save frames. */
@@ -146,14 +156,14 @@ void RenderingModule::launch(void)
         TinyTIFFWriter_close(depthTiff);
 
         std::string normalsFilename = renderFolderPath + std::to_string(n) + "_normals.tiff";
-        TinyTIFFWriterFile* normalsTiff = TinyTIFFWriter_open(normalsFilename.c_str(),16,TinyTIFFWriter_UInt,4,width,height,TinyTIFFWriter_RGBA);
+        TinyTIFFWriterFile* normalsTiff = TinyTIFFWriter_open(normalsFilename.c_str(),16,TinyTIFFWriter_UInt,3,width,height,TinyTIFFWriter_RGB);
         TinyTIFFWriter_writeImage(normalsTiff, normals_host);
         TinyTIFFWriter_close(normalsTiff);
 
         if(n>0)
         {
             std::string flowFilename = renderFolderPath + std::to_string(n) + "_flow.tiff";
-            TinyTIFFWriterFile* flowTiff = TinyTIFFWriter_open(flowFilename.c_str(),16,TinyTIFFWriter_UInt,4,width,height,TinyTIFFWriter_RGB);
+            TinyTIFFWriterFile* flowTiff = TinyTIFFWriter_open(flowFilename.c_str(),16,TinyTIFFWriter_UInt,3,width,height,TinyTIFFWriter_RGB);
             TinyTIFFWriter_writeImage(flowTiff, flow_host);
             TinyTIFFWriter_close(flowTiff);
         }
