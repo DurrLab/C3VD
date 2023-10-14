@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html data-bs-theme="light" lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -55,12 +55,14 @@
             </div>
             <div class="col-md-9">
                 <h2><span style="color: rgb(51, 51, 51);">Citation</span></h2>
-                <p><span style="color: rgb(51, 51, 51);">Please cite our publication if you use code or data from this site.</span><br></p><pre style="background-color: #f0f0f0;padding: 10px;border-radius: 3px;">
-<code class="language-latex">@article{bobrow2022,
-    title = {Colonoscopy 3D Video Dataset with Paired Depth from 2D-3D Registration},
-    author = {Taylor L. Bobrow, Mayank Golhar, Rohan Vijayan, Venkata Akshintala, Juan R. Garcia, Nicholas J. Durr},
-    journal= {arXiv:2206.08903},
-    year = {2022},
+                <p><span style="color: rgb(51, 51, 51);">Please cite our publication if you use code or data from this site.</span><br></p><pre style="background-color:#f0f0f0; padding:10px; border-radius:3px;">
+<code class="language-latex"> @article{bobrow2023,
+  title={Colonoscopy 3D video dataset with paired depth from 2D-3D registration},
+  author={Bobrow, Taylor L and Golhar, Mayank and Vijayan, Rohan and Akshintala, Venkata S and Garcia, Juan R and Durr, Nicholas J},
+  journal={Medical Image Analysis},
+  pages={102956},
+  year={2023},
+  publisher={Elsevier},
 }</code>
 </pre>
             </div>
@@ -71,7 +73,7 @@
                 <p style="margin-bottom: 4px;"><span style="color: rgb(13, 13, 13);">Colonoscopy video frames (left) are registered with rendered views of a ground truth 3D model (right). Edge features (overlay) are aligned by optimizing a loss function (bottom).</span><br></p><div>
     <iframe allowfullscreen frameborder="0" src="https://www.youtube-nocookie.com/embed/9uJQxTSCyo0/?rel=0&modestbranding=1&autohide=1&showinfo=0" width="560" height="560"></iframe>
 </div>
-                <p style="margin-top: 30px;margin-bottom: 4px;">Real colonoscope frames are paired with registered ground truth depth, surface normals, occlusion, and optical flow frames<br></p><div style="text-align: center;display: flex;justify-content: center;">
+                <p style="margin-top: 30px;margin-bottom: 4px;">Real colonoscope frames are paired with registered ground truth depth, surface normals, occlusion, and optical flow frames<br></p><div style="text-align: center; display: flex; justify-content: center;">
     <div class='before-after-container'>
         <div class='img background-img'></div>
         <div class='img foreground-img'></div>
@@ -90,7 +92,7 @@
         <div class="row" style="margin-top: 30px;">
             <div class="col">
                 <h1 class="text-center">Dataset</h1>
-                <p>C3VD contains 22 <a href="#registered">registered videos</a> with paired ground truth depth, surface normals, optical flow, occlusion, six degree-of-freedom pose, coverage maps, and 3D models. The dataset also includes 4 <a href="#screening">screening colonoscopy videos</a> acquired by a gastroenterologist with paired ground truth pose and 3D surface models. <a href="#models">3D model files and molds</a> are also available for download. <a href="#code">Registration and rendering code</a> is made available on GitHub. <em>Files&nbsp;are tagged with "under_review" until peer review is complete, at which point this page will be updated with the final files.</em><br></p>
+                <p>C3VD contains 22 <a href="#registered">registered videos</a> with paired ground truth depth, surface normals, optical flow, occlusion, six degree-of-freedom pose, coverage maps, and 3D models. The dataset also includes 4 <a href="#screening">screening colonoscopy videos</a> acquired by a gastroenterologist with paired ground truth pose and 3D surface models. <a href="#models">3D model files and molds</a> are also available for download. <a href="#code">Registration and rendering code</a> is made available on GitHub.</p>
             </div>
         </div>
         <h2 class="text-center" id="registered-1" style="margin: 0px;margin-top: 20px;margin-bottom: 8px;">Registered Videos</h2>
@@ -135,7 +137,7 @@
                                 <td>a</td>
                                 <td>276</td>
                                 <td id="c1a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="https://drive.google.com/uc?export=view&amp;id=1nn4t7vPaZb5iKxg9UqoAG0lQXE1Co66e&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t1_a_under_review.zip</span></a>&nbsp;(2.72 GB)</td>
+                                <td><a href="https://drive.google.com/uc?export=view&amp;id=14o6_4GQLZWx5dQq2L_drzmN_rlCT7Yhr&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t1_a.zip</span></a>&nbsp;(2.86 GB)</td>
                             </tr>
                             <tr>
                                 <td>Cecum</td>
@@ -143,7 +145,7 @@
                                 <td>b</td>
                                 <td>765</td>
                                 <td id="c1b"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1wnxc-Y53e-UalWmB_jyioDD0D0f71ujQ&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t1_b_under_review.zip</span></a>&nbsp;(7.28 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1z3AHdnBH_YoCMnnTfDa8SNPQYIsvaBO3&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t1_b.zip</span></a>&nbsp;(8.36 GB)</td>
                             </tr>
                             <tr>
                                 <td>Cecum</td>
@@ -151,7 +153,7 @@
                                 <td>a</td>
                                 <td>370</td>
                                 <td id="c2a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1r84bezJw26-OtYiTq7er8R1Pcm7UMqvS&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t2_a_under_review.zip</span></a>&nbsp;(3.45 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=13XhJIev9memFtwUf_dnjJ7o8z6O_c-xW&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t2_a.zip</span></a>&nbsp;(3.71 GB)</td>
                             </tr>
                             <tr>
                                 <td>Cecum</td>
@@ -159,7 +161,7 @@
                                 <td>b</td>
                                 <td>1,142</td>
                                 <td id="c2b"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1tUDPPxYXnec1XYCPQzd0RHw0wSqL-v1T&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t2_b_under_review.zip</span></a>&nbsp;(10.61 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1ykYtQGiFesev5QLfz_avYuQ5a7Zs8kgF&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t2_b.zip</span></a>&nbsp;(11.06 GB)</td>
                             </tr>
                             <tr>
                                 <td>Cecum</td>
@@ -167,7 +169,7 @@
                                 <td>c</td>
                                 <td>595</td>
                                 <td id="c2c"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1E_IKqNKb_fFog8A5QbLZBMD5Sz5uqPok&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t2_c_under_review.zip</span></a>&nbsp;(5.64 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1tNoBLpPbrQexKlnOKMK2peERn9Rj_9Dp&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t2_c.zip</span></a>&nbsp;(6.13 GB)</td>
                             </tr>
                             <tr>
                                 <td>Cecum</td>
@@ -175,7 +177,7 @@
                                 <td>a</td>
                                 <td>730</td>
                                 <td id="c3a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1T0emTHh7ier9Oyl1GatG89baH3boZ-w3&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t3_a_under_review.zip</span></a>&nbsp;(6.51 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1TqEZc4k_SNYDM2pN-vQmXVyLoAPqasRw&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t3_a.zip</span></a>&nbsp;(6.39 GB)</td>
                             </tr>
                             <tr>
                                 <td>Cecum</td>
@@ -183,7 +185,7 @@
                                 <td>a</td>
                                 <td>465</td>
                                 <td id="c4a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1JaEiAlekXyqeSfppIQjhpsTfPTwqMWA_&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t4_a_under_review.zip</span></a>&nbsp;(4.58 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1FC-dR__0LVb7WH02KpUx9TZVvvvN-Gyx&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t4_a.zip</span></a>&nbsp;(5.04 GB)</td>
                             </tr>
                             <tr>
                                 <td>Cecum</td>
@@ -191,7 +193,7 @@
                                 <td>b</td>
                                 <td>425</td>
                                 <td id="c4b"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1QcgVZDoQ8dpYFrg7eWv6K-tUZb15EROr&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t4_b_under_review.zip</span></a>&nbsp;(4.17 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=11SbH2AZsuciTu3iGxdXCdQZky6uDTyS5&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_t4_b.zip</span></a>&nbsp;(4.41 GB)</td>
                             </tr>
                             <tr>
                                 <td>Descending Colon</td>
@@ -199,7 +201,7 @@
                                 <td>a</td>
                                 <td>148</td>
                                 <td id="d4a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=14BEjwZmXwneKLKrguekItfSfaCrkolXL&amp;confirm=t"><span style="color: rgb(0, 0, 0);">desc_t4_a_under_review.zip</span></a>&nbsp;(1.04 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1d9HDNg4-Og1cTWM-eIU5SWM2BMrMWhwQ&amp;confirm=t"><span style="color: rgb(0, 0, 0);">desc_t4_a.zip</span></a>&nbsp;(1.24 GB)</td>
                             </tr>
                             <tr>
                                 <td>Sigmoid Colon</td>
@@ -207,7 +209,7 @@
                                 <td>a</td>
                                 <td>700</td>
                                 <td id="s1a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1c_sNnR60khdLUl-lFXBLniwClIN_Ijfs&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t1_a_under_review.zip</span></a>&nbsp;(4.55 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=19VGDuZ73OWNwM8eIgDkkZYBPJPQ5BD91&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t1_a.zip</span></a>&nbsp;(5.20 GB)</td>
                             </tr>
                             <tr>
                                 <td>Sigmoid Colon</td>
@@ -215,7 +217,7 @@
                                 <td>a</td>
                                 <td>514</td>
                                 <td id="s2a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1fmrGs1MaJ7YJhpljyiXdh8PpwyTNr8az&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t2_a_under_review.zip</span></a>&nbsp;(3.75 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=16epAys428g9vBQgm611TElMyAXORo7rH&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t2_a.zip</span></a>&nbsp;(4.22 GB)</td>
                             </tr>
                             <tr>
                                 <td>Sigmoid Colon</td>
@@ -223,7 +225,7 @@
                                 <td>a</td>
                                 <td>613</td>
                                 <td id="s3a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1xnxW2jY21uQypcJ6USz4hZaU3URYzUBd&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t3_a_under_review.zip</span></a>&nbsp;(3.98 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1ZRU2KuHoc2XCbKSY_A1S-7BxEfKf9xPr&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t3_a.zip</span></a>&nbsp;(4.58 GB)</td>
                             </tr>
                             <tr>
                                 <td>Sigmoid Colon</td>
@@ -231,7 +233,7 @@
                                 <td>b</td>
                                 <td>536</td>
                                 <td id="s3b"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1JwMB059w64RETEwmsXQvGbBSmnzzwUVO&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t3_b_under_review.zip</span></a>&nbsp;(3.76 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1XfZFAQ5_Wxle8d5wSlOCumKSg4IP8wTv&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_t3_b.zip</span></a>&nbsp;(4.21 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -239,7 +241,7 @@
                                 <td>a</td>
                                 <td>61</td>
                                 <td id="t1a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1FDoCcT1iv4bPcUgYcQcf5b6-Hji5o0O-&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t1_a_under_review.zip</span></a>&nbsp;(0.51 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1urFuVo8ZalwPmsXEZg3xzhuqhpgWV8hw&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t1_a.zip</span></a>&nbsp;(0.59 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -247,7 +249,7 @@
                                 <td>b</td>
                                 <td>700</td>
                                 <td id="t1b"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1a_blVDpuRB9tIrRdwC1J5X4xtDGYWJ1P&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t1_b_under_review.zip</span></a>&nbsp;(4.33 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1hyjmd7vn86McE1nUnYCzvOm8LlyHLYwt&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t1_b.zip</span></a>&nbsp;(5.07 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -255,7 +257,7 @@
                                 <td>a</td>
                                 <td>194</td>
                                 <td id="t2a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1b4hFg6T2GywjEvNBb5gtmoVBmj_d6sSU&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t2_a_under_review.zip</span></a>&nbsp;(1.42 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1ylZWWtVlXfDx9dhPIeWJ1HqDHJZ3QKdH&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t2_a.zip</span></a>&nbsp;(1.58 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -263,7 +265,7 @@
                                 <td>b</td>
                                 <td>103</td>
                                 <td id="t2b"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1BeI8HnKq7-xdaX93B1A8aU7zZGOTqqHc&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t2_b_under_review.zip</span></a>&nbsp;(0.83 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1vru228_TEgxT3aS90CmvOWsMB0RLnAxn&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t2_b.zip</span></a>&nbsp;(0.97 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -271,7 +273,7 @@
                                 <td>c</td>
                                 <td>235</td>
                                 <td id="t2c"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1qjCUxLzFZo50JZVEFA1Z1O__fUiMJh__&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t2_c_under_review.zip</span></a>&nbsp;(1.50 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=12YpowbP6zhoO_Qx9UBwhfRLXNJN1EAu4&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t2_c.zip</span></a>&nbsp;(1.83 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -279,7 +281,7 @@
                                 <td>a</td>
                                 <td>250</td>
                                 <td id="t3a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1tmEyJVjmml2zOwDAn2Xm-hxAj4ldI5Wa&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t3_a_under_review.zip</span></a>&nbsp;(1.58 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1B4aeZfAqmUJgWr8e-2YAibUe4er30ncr&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t3_a.zip</span></a>&nbsp;(1.83 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -287,7 +289,7 @@
                                 <td>b</td>
                                 <td>214</td>
                                 <td id="t3b"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=11xtCzgBR1F6nvKmCmVGmNXDFG1soNIoQ&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t3_b_under_review.zip</span></a>&nbsp;(1.49 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1ZpbYcDVP-sCTjjQrDc303olFgsr2nA5J&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t3_b.zip</span></a>&nbsp;(1.66 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -295,7 +297,7 @@
                                 <td>a</td>
                                 <td>382</td>
                                 <td id="t4a"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1Rz65xbPXa-U6g4qq3l46P90g7O6BCnqw&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t4_a_under_review.zip</span></a>&nbsp;(2.61 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=18qzXMifS54jAx29yROKXXxxZg0qo-iTz&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t4_a.zip</span></a>&nbsp;(3.10 GB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
@@ -303,7 +305,7 @@
                                 <td>b</td>
                                 <td>597</td>
                                 <td id="t4b"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1eM2lHvzkKwBuEq5uLxoUBJci1Lwl6mGP&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t4_b_under_review.zip</span></a>&nbsp;(4.10 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1C-nw6MR7sxssw3LS-GpiPmwBzEYhUCHN&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_t4_b.zip</span></a>&nbsp;(4.61 GB)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -335,28 +337,28 @@
                                 <td>1</td>
                                 <td>5,458</td>
                                 <td id="screen1"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=18m3Z5zJtljor_AGmPW8OgO9fRuactuNk&amp;confirm=t"><span style="color: rgb(0, 0, 0);">screening_t1_under_review.zip</span></a>&nbsp;(8.13 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=18m3Z5zJtljor_AGmPW8OgO9fRuactuNk&amp;confirm=t"><span style="color: rgb(0, 0, 0);">screening_t1.zip</span></a>&nbsp;(8.13 GB)</td>
                             </tr>
                             <tr>
                                 <td>Full Colon</td>
                                 <td>2</td>
                                 <td>5,100</td>
                                 <td id="screen2"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1kn_qevX7lLh3gWkiKAt3hgWFpy0P68s6&amp;confirm=t"><span style="color: rgb(0, 0, 0);">screening_t2_under_review.zip</span></a>&nbsp;(7.09 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1kn_qevX7lLh3gWkiKAt3hgWFpy0P68s6&amp;confirm=t"><span style="color: rgb(0, 0, 0);">screening_t2.zip</span></a>&nbsp;(7.09 GB)</td>
                             </tr>
                             <tr>
                                 <td>Full Colon</td>
                                 <td>3</td>
                                 <td>4,726</td>
                                 <td id="screen3"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1RmOnnjJBzCMwO5gPY4h3e4MpcDDOvOb6&amp;confirm=t"><span style="color: rgb(0, 0, 0);">screening_t3_under_review.zip</span></a>&nbsp;(7.07 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1RmOnnjJBzCMwO5gPY4h3e4MpcDDOvOb6&amp;confirm=t"><span style="color: rgb(0, 0, 0);">screening_t3.zip</span></a>&nbsp;(7.07 GB)</td>
                             </tr>
                             <tr>
                                 <td>Full Colon</td>
                                 <td>4</td>
                                 <td>4,774</td>
                                 <td id="screen4"><span style="text-decoration: underline;">Preview</span></td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1sYps79WjJ0ETRtuWtHd_1zeuyPLtoMM7&amp;confirm=t"><span style="color: rgb(0, 0, 0);">screening_t4_under_review.zip</span></a>&nbsp;(7.36 GB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1sYps79WjJ0ETRtuWtHd_1zeuyPLtoMM7&amp;confirm=t"><span style="color: rgb(0, 0, 0);">screening_t4.zip</span></a>&nbsp;(7.36 GB)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -378,32 +380,32 @@
                         <tbody>
                             <tr>
                                 <td>Ascending Colon</td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1EsWdG3r9WYUpONzNKFbNVl_u9zpTQPCd"><span style="color: rgb(0, 0, 0);">ascend_model_under_review.obj</span></a>&nbsp;(25.4 MB)</td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1ZYpT3aXKlpcW4kr_Qfa7dT9S_OPrMPPQ"><span style="color: rgb(0, 0, 0);">ascend_mold_under_review.zip</span></a>&nbsp;(18.7 MB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1EsWdG3r9WYUpONzNKFbNVl_u9zpTQPCd&amp;confirm=t"><span style="color: rgb(0, 0, 0);">ascend_model.obj</span></a>&nbsp;(25.4 MB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1coep9FX1AV0rWqFNpvxsKbDBRDUC7hQE&amp;confirm=t"><span style="color: rgb(0, 0, 0);">ascend_mold.zip</span></a>&nbsp;(18.7 MB)</td>
                             </tr>
                             <tr>
                                 <td>Cecum</td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1-1jVQn6lFHP22qyVO-fHA3f9Vvqiztpb"><span style="color: rgb(0, 0, 0);">cecum_model_under_review.obj</span></a>&nbsp;(54.8 MB)</td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1Ayv2poKeJHP3qpLcqUEniR41H8w91V9x"><span style="color: rgb(0, 0, 0);">cecum_mold_under_review.zip</span></a>&nbsp;(24.9 MB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1-1jVQn6lFHP22qyVO-fHA3f9Vvqiztpb&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_model.obj</span></a>&nbsp;(54.8 MB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1SlDiYm6B7t0Ce2ztE9ThA34AE7dwu7UN&amp;confirm=t"><span style="color: rgb(0, 0, 0);">cecum_mold.zip</span></a>&nbsp;(24.9 MB)</td>
                             </tr>
                             <tr>
                                 <td>Descending Colon</td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1B8CNXxAM5t8C2W14YAnzWJYUu5Lmtit7"><span style="color: rgb(0, 0, 0);">desc_model_under_review.obj</span></a>&nbsp;(38.0 MB)</td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1LWiMs9RTZrDtiaP9-pxj7BUfagyMRz3J&amp;confirm=t"><span style="color: rgb(0, 0, 0);">desc_mold_under_review.zip</span></a>&nbsp;(26.6 MB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1B8CNXxAM5t8C2W14YAnzWJYUu5Lmtit7&amp;confirm=t"><span style="color: rgb(0, 0, 0);">desc_model.obj</span></a>&nbsp;(38.0 MB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1kRPcB0IK_WdZtgp3b8SpD99vURd_NxAb&amp;confirm=t"><span style="color: rgb(0, 0, 0);">desc_mold.zip</span></a>&nbsp;(26.6 MB)</td>
                             </tr>
                             <tr>
                                 <td>Sigmoid Colon</td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1ySPh9w9Ix-fxh4r6cn3LYdu_A_1QWGAp"><span style="color: rgb(0, 0, 0);">sigmoid_model_under_review.obj</span></a>&nbsp;(20.8 MB)</td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1I_pFfrRm3hboAYmFe_wZPSF-a_fExfzY&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_mold_under_review.zip</span></a>&nbsp;(42.2 MB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1ySPh9w9Ix-fxh4r6cn3LYdu_A_1QWGAp&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_model.obj</span></a>&nbsp;(20.8 MB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=11k7AuwHVEae6EhQQ98R0tAwbbbtv8gdU&amp;confirm=t"><span style="color: rgb(0, 0, 0);">sigmoid_mold.zip</span></a>&nbsp;(42.2 MB)</td>
                             </tr>
                             <tr>
                                 <td>Transcending Colon</td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1--_lUA1fRlIB6Ed1rf1FfqsSWxe9vKYQ"><span style="color: rgb(0, 0, 0);">trans_model_under_review.obj</span></a>&nbsp;(18.3 MB)</td>
-                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1k2gwe-JZxuvUG1ABikQ9ld9jaI3vmbAa"><span style="color: rgb(0, 0, 0);">trans_mold_under_review.zip</span></a>&nbsp;(24.1 MB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1--_lUA1fRlIB6Ed1rf1FfqsSWxe9vKYQ&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_model.obj</span></a>&nbsp;(18.3 MB)</td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=1Icvgs1DGQQ1fGS3bgAjbsA9NJYNQhGrB&amp;confirm=t"><span style="color: rgb(0, 0, 0);">trans_mold.zip</span></a>&nbsp;(24.1 MB)</td>
                             </tr>
                             <tr>
                                 <td>Full Colon</td>
-                                <td><span style="color: rgb(0, 0, 0);">full_model_under_review.obj</span></td>
+                                <td><a href="http://drive.google.com/uc?export=view&amp;id=12gKUf4HvPYm3DiRxFmoum70--kkSewhq&amp;confirm=t"><span style="color: rgb(0, 0, 0);">full_model.obj</span></a>&nbsp;(194.8 MB)</td>
                                 <td></td>
                             </tr>
                         </tbody>
@@ -423,6 +425,7 @@
         <div class="row">
             <div class="col">
                 <h2 class="text-center" id="screening-1" style="margin: 0px;margin-top: 20px;margin-bottom: 8px;"><span style="color: var(--bs-gray-800);">Revision History</span></h2>
+                <p><em>10/14/2023 |&nbsp;Updated the dataset file names to reflect peer-review completion.</em></p>
                 <p><em>05/03/2023 |&nbsp;Revised ground truth surface normal frames and updated naming convention:</em></p>
                 <ul>
                     <li>Corrected an error in the rendering code clipped negative surface normal z-components to 0 and resulted in some surface normals having a non-unitary length.</li>
@@ -437,7 +440,7 @@
             </div>
         </div>
         <div class="row" style="margin: 0px;">
-            <div class="col text-center" style="margin: 0px;padding: 0px;margin-top: 40px;"><p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display: inline-block;">CC BY-NC-SA 4.0<img style="height: 22px!important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height: 22px!important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height: 22px!important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height: 22px!important;margin-left: 3px;vertical-align: text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p></div>
+            <div class="col text-center" style="margin: 0px;padding: 0px;margin-top: 40px;"><p xmlns:cc="http://creativecommons.org/ns#" >This work is licensed under <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY-NC-SA 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1"></a></p></div>
         </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
