@@ -106,11 +106,13 @@ A sample raw video sequence from the dataset is available for download [HERE](ht
 ## Reference
 If you find our work useful in your research, please consider citing our paper:
 ```
-@article{bobrow2022,
-  title = {Colonoscopy 3D Video Dataset with Paired Depth from 2D-3D Registration},
-  author = {Taylor L. Bobrow, Mayank Golhar, Rohan Vijayan, Venkata S. Akshintala, Juan R. Garcia, and Nicholas J. Durr},
-  journal = {arXiv:2206.08903},
-  year = {2022},
+@article{bobrow2023,
+    title={Colonoscopy 3D video dataset with paired depth from 2D-3D registration},
+    author={Bobrow, Taylor L and Golhar, Mayank and Vijayan, Rohan and Akshintala, Venkata S and Garcia, Juan R and Durr, Nicholas J},
+    journal={Medical Image Analysis},
+    pages={102956},
+    year={2023},
+    publisher={Elsevier}
 }
 ```
 
