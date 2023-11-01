@@ -10,3 +10,6 @@
 [submodule "external/tinytiff"]
 	path = external/tinytiff
 	url = https://github.com/jkriege2/TinyTIFF.git
+[submodule "external/cmaes"]
+	path = external/cmaes
+	url = https://github.com/CMA-ES/libcmaes.git
