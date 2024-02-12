@@ -133,7 +133,12 @@ void AlignmentModule::launch(void)
 
         /* If overlaying target frames. */
         if(gui->overlayTarget->Get())
-            gui->loadTargetImg(rgbFolderPath + std::to_string(gui->currentFrame->Get()) + ".png");
+        {
+            std::string rgbFramePath = rgbFolderPath
+                                     + std::string(4 - std::min(4, (int)std::to_string(n).length()), '0') + std::to_string(n)
+                                     + ".png";
+            gui->loadTargetImg(rgbFramePath);
+        }
 
         /* Mask corners. */
         mask->apply((uint32_t*)owlBufferGetPointer(context->fbDiffuse,0));

@@ -150,25 +150,27 @@ void RenderingModule::launch(void)
         cudaMemcpy(occlusion_host,owlBufferGetPointer(context->fbOcclusion,0),width*height*1*sizeof(uint8_t),cudaMemcpyDeviceToHost);
 
         /* Save frames. */
-        std::string depthFilename = renderFolderPath + std::to_string(n) + "_depth.tiff";
+        std::string num_str = std::string(4 - std::min(4, (int)std::to_string(n).length()), '0') + std::to_string(n);
+
+        std::string depthFilename = renderFolderPath + num_str + "_depth.tiff";
         TinyTIFFWriterFile* depthTiff = TinyTIFFWriter_open(depthFilename.c_str(),16,TinyTIFFWriter_UInt,1,width,height,TinyTIFFWriter_Greyscale);
         TinyTIFFWriter_writeImage(depthTiff, depth_host);
         TinyTIFFWriter_close(depthTiff);
 
-        std::string normalsFilename = renderFolderPath + std::to_string(n) + "_normals.tiff";
+        std::string normalsFilename = renderFolderPath + num_str + "_normals.tiff";
         TinyTIFFWriterFile* normalsTiff = TinyTIFFWriter_open(normalsFilename.c_str(),16,TinyTIFFWriter_UInt,3,width,height,TinyTIFFWriter_RGB);
         TinyTIFFWriter_writeImage(normalsTiff, normals_host);
         TinyTIFFWriter_close(normalsTiff);
 
         if(n>0)
         {
-            std::string flowFilename = renderFolderPath + std::to_string(n) + "_flow.tiff";
+            std::string flowFilename = renderFolderPath + num_str + "_flow.tiff";
             TinyTIFFWriterFile* flowTiff = TinyTIFFWriter_open(flowFilename.c_str(),16,TinyTIFFWriter_UInt,3,width,height,TinyTIFFWriter_RGB);
             TinyTIFFWriter_writeImage(flowTiff, flow_host);
             TinyTIFFWriter_close(flowTiff);
         }
 
-        std::string occlusionFilename = renderFolderPath + std::to_string(n) + "_occlusion.png";
+        std::string occlusionFilename = renderFolderPath + num_str + "_occlusion.png";
         stbi_write_png(occlusionFilename.c_str(),width,height,1,occlusion_host,width*sizeof(uint8_t));
 
         /* Save pose. */
