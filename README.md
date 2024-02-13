@@ -48,13 +48,13 @@ Before running any of the programs, create a new working directory for each vide
     ├── pose.txt      # robot pose log; one pose per line, formatted <time in seconds> <homogenous pose in column-major form>
     ├── mask.png      # binary corner mask for Olympus endoscopes
     ├── rgb/          # rgb image folder
-    │   ├── 0.png         
-    │   ├── 1.png
+    │   ├── 0000.png         
+    │   ├── 0001.png
     │   │   ...
     │   └── N-1.png
     ├── depth/        # GAN-predicted depth image folder
-    │   ├── 0.png         
-    │   ├── 1.png
+    │   ├── 0000.png         
+    │   ├── 0001.png
     │   │   ...
     │   └── N-1.png
     ├── results/      # registration results folder
@@ -101,7 +101,7 @@ Update the modelTransform parameter in the configuration file to the result from
 Rendered ground truth files are saved in the *render* folder.
 
 ## Sample Video Sequence
-A sample raw video sequence from the dataset is available for download [HERE](https://drive.google.com/file/d/1lWxDYsQUVon6egGOaMxytTcq3opMkTHS/view?usp=sharing). Once uncompressed, the folder is ready to be run by the programs.  
+A sample raw video sequence from the dataset is available for download [HERE](https://drive.google.com/file/d/1Ddeq5Dm4tx7cMRTZBu3CN3otsGu2_kY1/view?usp=sharing). Once uncompressed, the folder is ready to be run by the programs.  
 
 ## Reference
 If you find our work useful in your research, please consider citing our paper:
