@@ -135,7 +135,8 @@ void AlignmentModule::launch(void)
         if(gui->overlayTarget->Get())
         {
             std::string rgbFramePath = rgbFolderPath
-                                     + std::string(4 - std::min(4, (int)std::to_string(n).length()), '0') + std::to_string(n)
+                                     + std::string(4 - std::min(4, (int)std::to_string(gui->currentFrame->Get()).length()), '0')
+                                     + std::to_string(gui->currentFrame->Get())
                                      + ".png";
             gui->loadTargetImg(rgbFramePath);
         }
