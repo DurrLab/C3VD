@@ -66,13 +66,13 @@ RenderingModule::RenderingModule(int argc, char* argv[])
                              | RenderFlags::COVERAGE);
 
     /* Set the model transform to the ground truth. */
-    glm::quat qx = glm::angleAxis(modelTransformR6[0],glm::vec3(1.0,0.0,0.0));
-    glm::quat qy = glm::angleAxis(modelTransformR6[1],glm::vec3(0.0,1.0,0.0));
-    glm::quat qz = glm::angleAxis(modelTransformR6[2],glm::vec3(0.0,0.0,1.0));
+    glm::quat qx = glm::angleAxis((float)modelTransformR6[0],glm::vec3(1.0,0.0,0.0));
+    glm::quat qy = glm::angleAxis((float)modelTransformR6[1],glm::vec3(0.0,1.0,0.0));
+    glm::quat qz = glm::angleAxis((float)modelTransformR6[2],glm::vec3(0.0,0.0,1.0));
     glm::quat q  = qz*qy*qx;
 
     T_final = glm::mat4_cast(q);
-    T_final = glm::column(T_final,3,glm::vec4(modelTransformR6[3],modelTransformR6[4],modelTransformR6[5],1.0f));
+    T_final = glm::column(T_final,3,glm::vec4((float)modelTransformR6[3],(float)modelTransformR6[4],(float)modelTransformR6[5],1.0f));
 
     context->updateMeshTransform(T_final);
 
