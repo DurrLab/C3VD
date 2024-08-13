@@ -14,6 +14,7 @@
 
 #include "render/Intrinsics.h"
 #include "render/RenderFlags.h"
+#include "render/Rgba2r.cuh"
 #include "render/Rgba2rgb.cuh"
 #include "render/TransformFlags.h"
 #include "tools/ConfigParser.h"
@@ -34,7 +35,7 @@ RenderingModule::RenderingModule(int argc, char* argv[])
     modelFilePath      = std::string(argv[2]) + "model.obj";
     poseFilePath       = std::string(argv[2]) + "pose.txt";
     rgbFolderPath      = std::string(argv[2]) + "rgb/";
-    maskFilePath        = std::string(argv[2]) + "mask.png";
+    maskFilePath       = std::string(argv[2]) + "mask.png";
     renderFolderPath   = std::string(argv[2]) + "render/";
 
     /* Load obj file. */
@@ -80,8 +81,12 @@ RenderingModule::RenderingModule(int argc, char* argv[])
     cudaMalloc((void**) &normalsNoAlpha_dev, sizeof(uint16_t)*width*height*3);
     cudaMalloc((void**) &flowNoAlpha_dev,    sizeof(uint16_t)*width*height*3);
 
+    /* Allocate device memory for image data w/ gba channels removed. */
+    cudaMalloc((void**) &diffuseNoGba_dev, sizeof(uint8_t)*width*height);
+
     /* Allocate host memory for rendered image data. */
-    depth_host      = (uint16_t*)malloc(width*height*1*sizeof(uint16_t));
+    diffuse_host    = (uint8_t*) malloc(width*height*1*sizeof(uint8_t));   
+    depth_host      = (uint16_t*)malloc(width*height*1*sizeof(uint16_t));    
     normals_host    = (uint16_t*)malloc(width*height*4*sizeof(uint16_t));
     flow_host       = (uint16_t*)malloc(width*height*4*sizeof(uint16_t));
     occlusion_host  = (uint8_t*) malloc(width*height*1*sizeof(uint8_t));
@@ -102,6 +107,8 @@ RenderingModule::~RenderingModule(void)
     delete context;
     cudaFree(normalsNoAlpha_dev);
     cudaFree(flowNoAlpha_dev);
+    cudaFree(diffuseNoGba_dev);
+    free(diffuse_host);
     free(depth_host);
     free(normals_host);
     free(flow_host);
@@ -143,7 +150,11 @@ void RenderingModule::launch(void)
         rgba2Rgb((uint16_t*)owlBufferGetPointer(context->fbNormals,0),normalsNoAlpha_dev,width,height);
         rgba2Rgb((uint16_t*)owlBufferGetPointer(context->fbFlow,0),flowNoAlpha_dev,width,height);
 
+        /* Remove GBA channels from diffuse. */
+        rgba2R((uint8_t*)owlBufferGetPointer(context->fbDiffuse,0),diffuseNoGba_dev,width,height);
+
         /* Copy rendering data from device to host. */
+        cudaMemcpy(diffuse_host,diffuseNoGba_dev,width*height*1*sizeof(uint8_t),cudaMemcpyDeviceToHost);
         cudaMemcpy(depth_host,owlBufferGetPointer(context->fbDepth,0),width*height*1*sizeof(uint16_t),cudaMemcpyDeviceToHost);
         cudaMemcpy(normals_host,normalsNoAlpha_dev,width*height*3*sizeof(uint16_t),cudaMemcpyDeviceToHost);
         cudaMemcpy(flow_host,flowNoAlpha_dev,width*height*3*sizeof(uint16_t),cudaMemcpyDeviceToHost);
@@ -151,6 +162,9 @@ void RenderingModule::launch(void)
 
         /* Save frames. */
         std::string num_str = std::string(4 - std::min(4, (int)std::to_string(n).length()), '0') + std::to_string(n);
+
+        std::string diffuseFilename = renderFolderPath + num_str + "_diffuse.png";
+        stbi_write_png(diffuseFilename.c_str(),width,height,1,diffuse_host,width*sizeof(uint8_t));
 
         std::string depthFilename = renderFolderPath + num_str + "_depth.tiff";
         TinyTIFFWriterFile* depthTiff = TinyTIFFWriter_open(depthFilename.c_str(),16,TinyTIFFWriter_UInt,1,width,height,TinyTIFFWriter_Greyscale);

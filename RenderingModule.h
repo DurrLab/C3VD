@@ -85,7 +85,11 @@ class RenderingModule
         uint16_t *normalsNoAlpha_dev;
         uint16_t *flowNoAlpha_dev;
 
+        /* Image w/ no gba device memory. */
+        uint8_t *diffuseNoGba_dev;
+
         /* Image host memory. */
+        uint8_t  *diffuse_host;
         uint16_t *depth_host;
         uint16_t *normals_host;
         uint16_t *flow_host;

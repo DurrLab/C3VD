@@ -57,6 +57,8 @@ set(RENDER_SRC
     ${CMAKE_CURRENT_SOURCE_DIR}/render/RenderContext.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/render/RenderContext.h
     ${CMAKE_CURRENT_SOURCE_DIR}/render/RenderFlags.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/render/Rgba2r.cu
+    ${CMAKE_CURRENT_SOURCE_DIR}/render/Rgba2r.cuh
     ${CMAKE_CURRENT_SOURCE_DIR}/render/Rgba2rgb.cu
     ${CMAKE_CURRENT_SOURCE_DIR}/render/Rgba2rgb.cuh    
     ${CMAKE_CURRENT_SOURCE_DIR}/render/tiny_obj_loader.h
