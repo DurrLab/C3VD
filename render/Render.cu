@@ -271,15 +271,15 @@ OPTIX_RAYGEN_PROGRAM(render)()
 
     optixLaunchParams.fbDiffuse[px_idx] = owl::make_rgba(owl::vec3f(diffuse));
 
-    optixLaunchParams.fbDepth[px_idx] = (uint16_t)65535.0*(owl::clamp(depth / MAX_DEPTH,0.f,1.f));
+    optixLaunchParams.fbDepth[px_idx] = (uint16_t)65535.f*(owl::clamp(depth / MAX_DEPTH,0.f,1.f));
 
-    optixLaunchParams.fbNormals[px_idx] = owl::vec4us((uint16_t)(65535.0*((normals.x + 1.f)/2.f)),
-                                                      (uint16_t)(65535.0*((normals.y + 1.f)/2.f)),
-                                                      (uint16_t)(65535.0*((normals.z + 1.f)/2.f)),
+    optixLaunchParams.fbNormals[px_idx] = owl::vec4us((uint16_t)(65535.f*owl::clamp((normals.x + 1.f)/2.f,0.f,1.f)),
+                                                      (uint16_t)(65535.f*owl::clamp((normals.y + 1.f)/2.f,0.f,1.f)),
+                                                      (uint16_t)(65535.f*owl::clamp((normals.z + 1.f)/2.f,0.f,1.f)),
                                                        65535);
 
-    optixLaunchParams.fbFlow[px_idx] = owl::vec4us((uint16_t)(65535.0*((flow.x + MAX_FLOW)/(2.f*MAX_FLOW))),
-                                                   (uint16_t)(65535.0*((flow.y + MAX_FLOW)/(2.f*MAX_FLOW))),
+    optixLaunchParams.fbFlow[px_idx] = owl::vec4us((uint16_t)(65535.f*owl::clamp((flow.x + MAX_FLOW)/(2.f*MAX_FLOW),0.f,1.f)),
+                                                   (uint16_t)(65535.f*owl::clamp((flow.y + MAX_FLOW)/(2.f*MAX_FLOW),0.f,1.f)),
                                                     0,
                                                     65535);
 
