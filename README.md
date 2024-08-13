@@ -101,7 +101,17 @@ Update the modelTransform parameter in the configuration file to the result from
 Rendered ground truth files are saved in the *render* folder.
 
 ## Sample Video Sequence
-A sample raw video sequence from the dataset is available for download [HERE](https://drive.google.com/file/d/1Ddeq5Dm4tx7cMRTZBu3CN3otsGu2_kY1/view?usp=sharing). Once uncompressed, the folder is ready to be run by the programs.  
+A sample raw video sequence from the dataset is available for download [HERE](https://drive.google.com/file/d/1Ddeq5Dm4tx7cMRTZBu3CN3otsGu2_kY1/view?usp=sharing). Once uncompressed, the folder is ready to be run by the programs.
+
+## Visualize Coverage Map
+To visualize a coverage map similar to Figure 9 in the manuscript, open the coverage_map.obj output from rendergt in MeshLab and apply a 'Per Face Color Function' (Filters->Color Creation and Processing->Per Face Color Function) with the following values:
+
+* func r = 255
+* func g = 255-255*wtu0
+* func b = 255-255*wtu0
+* func alpha = 255
+
+You must also set the Face Color to 'Face', not 'Mesh' or 'User-Def'.
 
 ## Reference
 If you find our work useful in your research, please consider citing our paper:
