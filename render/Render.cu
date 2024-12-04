@@ -102,8 +102,8 @@ OPTIX_CLOSEST_HIT_PROGRAM(primary)()
     const owl::vec3i index = sbtData.index[primID];
 
     /* Basic hit information. */
-    const glm::vec3 dir    = glm::make_vec3(&optixGetWorldRayDirection().x);
-    const glm::vec3 origin = glm::make_vec3(&optixGetWorldRayOrigin().x);
+    const glm::vec3 dir    = make_vec3(optixGetWorldRayDirection());
+    const glm::vec3 origin = make_vec3(optixGetWorldRayOrigin());
     const float hit_t      = optixGetRayTmax();
     const glm::vec3 hitPos = origin + (hit_t*dir);
 
@@ -117,7 +117,7 @@ OPTIX_CLOSEST_HIT_PROGRAM(primary)()
 
     owl::vec3f N = normalize(owl::common::cross(B-A,C-A));
 
-    glm::vec3 Nw = glm::make_vec3(&normalize(optixTransformNormalFromObjectToWorldSpace(N)).x);
+    glm::vec3 Nw = make_vec3(normalize(optixTransformNormalFromObjectToWorldSpace(N)));
 
     /* Face forward. */
     if (dot(dir,Nw) > 0.0) Nw = -Nw;
