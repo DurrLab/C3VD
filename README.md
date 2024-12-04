@@ -19,7 +19,7 @@ This repository contains the registration and rendering code used in *Colonoscop
 
 2. Pull the repository and associated submodules:
 ```
-git clone 
+git clone https://github.com/DurrLab/C3VD.git
 cd C3VD
 git submodule init
 git submodule update
