@@ -113,6 +113,9 @@ To visualize a coverage map similar to Figure 9 in the manuscript, open the cove
 
 You must also set the Face Color to 'Face', not 'Mesh' or 'User-Def'.
 
+## Example Data Loader
+An example data loader for the dataset is provided in [python/exampleDataLoader.py](./python/exampleDataLoader.py). The script loads poses and depth frames from a C3VD sequence and reprojects them into a 3D point cloud.
+
 ## Reference
 If you find our work useful in your research, please consider citing our paper:
 ```
